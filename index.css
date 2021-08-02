@@ -1,80 +1,72 @@
-
-.caixas{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* background-color: #CCCCCC; */
-}
-
-.conteudo1{
-    width: 61%;
-    height: 50px;
-    background-color: #CCCCCC;
-    font-weight: bold;    
-}
-
-.conteudo1 p{
-    text-align: center;
-    align-items: center;
-}
-
-.conteudo2{
-    width: 13%;
-    height: 50px;
-    background-color: #E6CC49;
-    text-align: center;
-    font-weight: bold;
-    justify-items: center;
-}
-
-.conteudo3{
-    width: 13%;
-    height: 50px;
-    background-color: #E6CC49;
-    text-align: center;
-    font-weight: bold;
-}
-
-.conteudo4{
-    width: 13%;
-    height: 50px;
-    background-color: #E6CC49;
-    text-align: center;
-    font-weight: bold;
-}
-
-.conteudo1:hover {
+    body {
+        background-image: url(img/fundo.jpg);
+    }
     
-    font-size: 45px;
-
-}
-
-.conteudo2:hover, .conteudo3:hover, .conteudo4:hover {
-    background: purple;
-}
-
-
-
-
-
-@media (max-width: 600px) {
-    .caixas{
-        flex-direction: column;
-        
+    .cabeçalho {
+        height: 90px;
+        background: #d96b43dc;
+        display: flex;
+        justify-content: space-between;
     }
-    .conteudo1{
-        display: none;
-
+    
+    .logo {
+        width: 90px;
     }
-    .conteudo2{
-        width: 100%;
-
+    
+    .menu {
+        display: flex;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 30px;
     }
-    .conteudo3{
-        width:100%
-
+    
+    .botao {
+        margin: 0 20px;
     }
-    .conteudo4{
-        width: 100%;
+    
+    .botao a {
+        text-decoration: none;
     }
-}
+    
+    .botao:hover {
+        color: yellow;
+        transform: translateX(10px) scale(1.5);
+    }
+    
+    .logo:hover {
+        transform: translateX(10px) scale(1.2);
+    }
+    
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .doguinho img {
+        width: 200px;
+        border-radius: 5%;
+        margin: 40px 50px;
+        max-width: 230px;
+    }
+    
+    #fim {
+        text-align: center;
+        background-color: #d96b43dc;
+    }
+    /* INICIO DO RESPONSIVO */
+    
+    @media (max-width: 600px) {
+        * {
+            width: auto;
+        }
+        .menu {
+            flex-direction: column;
+        }
+        .logo {
+            width: 110px;
+        }
+        .doguinho img {
+            width: 200px;
+        }
+    }
